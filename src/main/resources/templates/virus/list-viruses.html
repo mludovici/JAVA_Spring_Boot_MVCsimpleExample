@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Virus Directory</title>
+</head>
+
+<body>
+
+<div class="container">
+
+	<h3>Virus Directory</h3>
+	
+	<table class="table table-bordered table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th>id</th>
+				<th>Name</th>
+				<th>Mortality Rate %</th>
+				<th>Risk</th>
+				<th>Year</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="tempVirus : ${virus}">
+			
+				<td th:text="${tempVirus.id}" />	
+				<td th:text="${tempVirus.name}" />	
+				<td th:text="${tempVirus.mortalityRate}" />	
+				<td th:text="${tempVirus.risk}" />	
+				<td th:text="${tempVirus.year}" />	
+				
+			</tr>
+		</tbody>		
+	</table>
+	
+</div>
+	
+</body>
+</html>
+
+
+
